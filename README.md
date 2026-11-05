@@ -1,5 +1,7 @@
 # Quantix AI — Website
 
+Live: **https://quantixaisolution.github.io** — deployed automatically by GitHub Actions on every push to `main`.
+
 React 19 · Vite · Framer Motion · Tailwind CSS v4 · lucide-react
 
 ```bash
@@ -90,7 +92,7 @@ const { theme, setTheme, themes } = useTheme();
 | `og-banner.jpg` | Social share preview (LinkedIn, WhatsApp, X) |
 
 Brand colors: navy `#001C58` · blue `#0164C9` · cyan `#01D2F4`. The wordmark uses Montserrat (`font-brand`); the rest of the site uses DM Sans.
-Once the domain is live, change `og:image` in `index.html` to an absolute URL (e.g. `https://yourdomain.com/brand/og-banner.jpg`) so every platform picks it up.
+If the site moves to a custom domain, update the canonical, `og:url` and `og:image` URLs in `index.html`.
 
 ## Images
 
