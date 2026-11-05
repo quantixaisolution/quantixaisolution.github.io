@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS
+   Components only use these semantic names (bg-surface, text-muted,
+   from-primary…). Each [data-theme] block below overrides them, so a
+   theme switch re-colors the whole site with zero component changes.
+   Defaults = "midnight".
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-brand: "Montserrat", "DM Sans", ui-sans-serif, sans-serif; /* logo wordmark only */
+
+  --color-bg: #f4f8ff;
+  --color-surface: #ffffff;
+  --color-line: rgb(0 28 88 / 0.1);
+  --color-fg: #001c58;
+  --color-muted: #4a5b82;
+  --color-primary: #0164c9;
+  --color-primary-strong: #00409a;
+  --color-accent: #01b8e0;
+  --color-highlight: #0157b0; /* accent-colored text that stays readable on bg */
+  --color-on-primary: #ffffff; /* text on primary gradients */
+  --color-success: #047857;
+  --color-danger: #be123c;
+
+  --animate-marquee: marquee var(--marquee-duration, 30s) linear infinite;
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+/* ---------- Themes (keep ids in sync with src/theme/themes.js) ---------- */
+/* Light themes: logo mark as-is. Dark themes: soft light outline so the navy Q stays visible. */
+[data-theme] { --logo-filter: none; }
+[data-theme="midnight"], [data-theme="forest"] {
+  --logo-filter: drop-shadow(0 0 1px rgb(255 255 255 / 0.7)) drop-shadow(0 0 10px rgb(1 210 244 / 0.25));
+}
+
+/* Official brand palette — navy #001C58 · blue #0164C9 · cyan #01D2F4 */
+[data-theme="quantix"] {
+  color-scheme: light;
+  --color-bg: #f4f8ff;
+  --color-surface: #ffffff;
+  --color-line: rgb(0 28 88 / 0.1);
+  --color-fg: #001c58;
+  --color-muted: #4a5b82;
+  --color-primary: #0164c9;
+  --color-primary-strong: #00409a;
+  --color-accent: #01b8e0;
+  --color-highlight: #0157b0;
+  --color-on-primary: #ffffff;
+  --color-success: #047857;
+  --color-danger: #be123c;
+}
+
+[data-theme="aurora"] {
+  color-scheme: light;
+  --color-bg: #f7f5ff;
+  --color-surface: #ffffff;
+  --color-line: rgb(35 22 80 / 0.1);
+  --color-fg: #1a1433;
+  --color-muted: #5f5a7a;
+  --color-primary: #7c4dff;
+  --color-primary-strong: #6d28d9;
+  --color-accent: #ec4899;
+  --color-highlight: #6d28d9;
+  --color-on-primary: #ffffff;
+  --color-success: #047857;
+  --color-danger: #be123c;
+}
+
+[data-theme="midnight"] {
+  color-scheme: dark;
+  --color-bg: #020b1f;
+  --color-surface: #08173a;
+  --color-line: rgb(255 255 255 / 0.09);
+  --color-fg: #eef4ff;
+  --color-muted: #93a6c9;
+  --color-primary: #1f7ae0;
+  --color-primary-strong: #0164c9;
+  --color-accent: #01d2f4;
+  --color-highlight: #6fc3ff;
+  --color-on-primary: #ffffff;
+  --color-success: #6ee7b7;
+  --color-danger: #fb7185;
+}
+
+[data-theme="ocean"] {
+  color-scheme: light;
+  --color-bg: #f2f9fb;
+  --color-surface: #ffffff;
+  --color-line: rgb(8 47 73 / 0.1);
+  --color-fg: #0b2433;
+  --color-muted: #4b6878;
+  --color-primary: #0284c7;
+  --color-primary-strong: #0369a1;
+  --color-accent: #0d9488;
+  --color-highlight: #0369a1;
+  --color-on-primary: #ffffff;
+  --color-success: #047857;
+  --color-danger: #be123c;
+}
+
+[data-theme="sunset"] {
+  color-scheme: light;
+  --color-bg: #fff8f2;
+  --color-surface: #ffffff;
+  --color-line: rgb(80 30 10 / 0.1);
+  --color-fg: #2a1408;
+  --color-muted: #75584a;
+  --color-primary: #f97316;
+  --color-primary-strong: #ea580c;
+  --color-accent: #e11d48;
+  --color-highlight: #c2410c;
+  --color-on-primary: #ffffff;
+  --color-success: #047857;
+  --color-danger: #be123c;
+}
+
+[data-theme="forest"] {
+  color-scheme: dark;
+  --color-bg: #060d0a;
+  --color-surface: #0d1712;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-fg: #eef6f0;
+  --color-muted: #93a89a;
+  --color-primary: #22c55e;
+  --color-primary-strong: #16a34a;
+  --color-accent: #eab308;
+  --color-highlight: #86efac;
+  --color-on-primary: #04130a;
+  --color-success: #86efac;
+  --color-danger: #fb7185;
+}
+
+[data-theme="candy"] {
+  color-scheme: light;
+  --color-bg: #faf7ff;
+  --color-surface: #ffffff;
+  --color-line: rgb(50 20 90 / 0.1);
+  --color-fg: #1e1533;
+  --color-muted: #62587a;
+  --color-primary: #a855f7;
+  --color-primary-strong: #9333ea;
+  --color-accent: #3b82f6;
+  --color-highlight: #7e22ce;
+  --color-on-primary: #ffffff;
+  --color-success: #047857;
+  --color-danger: #be123c;
+}
+
+/* Progress bar for auto-advancing <Tabs>; its animationend drives the switch. */
+@keyframes tab-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 35%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

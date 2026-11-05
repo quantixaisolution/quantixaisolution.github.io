@@ -1,0 +1,31 @@
+Photos from Unsplash (https://unsplash.com/license) — free for commercial use, no attribution required.
+Source IDs (https://unsplash.com/photos/<id> may differ; images.unsplash.com/<id>):
+- svc-pricing photo-1543286386-713bdd548da4
+- svc-bi photo-1551288049-bebda4e38f71
+- svc-datasci photo-1518186285589-2f7649de83e0
+- svc-ml photo-1555949963-aa79dcee981c
+- svc-genai photo-1677442136019-21780ecad995
+- svc-agentic photo-1485827404703-89b55fcc595e
+- svc-accounting photo-1554224155-6726b3ff858f
+- svc-web photo-1498050108023-c5249f4df085
+- about-team photo-1522071820081-009f0129c71c
+- about-meeting photo-1600880292203-757bb62b4baf
+- ind-retail photo-1441986300917-64674bd600d8
+- ind-manufacturing photo-1581091226825-a6a2a5aee158
+- ind-finance photo-1563986768609-322da13575f3
+- ind-healthcare photo-1576091160399-112ba8d25d1d
+- ind-logistics photo-1586528116311-ad8dd3c8310d
+- ind-saas photo-1460925895917-afdab827c52f
+- work-pricing photo-1556742049-0cfed4f6a45d
+- work-bi photo-1504868584819-f8e8b4b6d7e3
+- work-ap photo-1450101499163-c8848c66ca85
+- work-churn photo-1556745757-8d76bdb6984b
+- work-profit photo-1565793298595-6a879b1d9492
+- work-portal photo-1531403009284-440f080d1e12
+- cta-office photo-1497366216548-37526070297c
+- work-fin-forecast photo-1579621970795-87facc2f976d
+- work-demand photo-1553413077-190dd305871c
+- work-chatbot photo-1531746790731-6c087fecd65a
+- work-leads photo-1552664730-d307ca884978
+- work-ecommerce photo-1563013544-824ae1b704d3
+- work-website photo-1547658719-da2b51169166

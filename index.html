@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/brand/favicon-64.png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quantix AI Solutions: pricing analytics, BI, data science, machine learning, generative and agentic AI, accounting and web development — one team turning data into decisions." />
+    <meta name="theme-color" content="#f4f8ff" />
+    <script>
+      // Apply saved theme before first paint to avoid a flash of the wrong colors.
+      (function () {
+        var ids = ["quantix", "aurora", "midnight", "ocean", "sunset", "forest", "candy"];
+        var t = null;
+        try { t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("quantix-theme"); } catch (e) {}
+        if (ids.indexOf(t) < 0) t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "quantix" : "midnight";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <title>Quantix AI Solutions — Turning Data into Intelligence</title>
+    <!-- Social share preview (LinkedIn, WhatsApp, X…). Use absolute URLs once the domain is live. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Quantix AI Solutions" />
+    <meta property="og:title" content="Quantix AI Solutions — Turning Data into Intelligence" />
+    <meta property="og:description" content="Driving business growth with AI & analytics: pricing, BI, data science, machine learning, generative & agentic AI, accounting and software development." />
+    <meta property="og:image" content="/brand/og-banner.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&family=DM+Mono:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

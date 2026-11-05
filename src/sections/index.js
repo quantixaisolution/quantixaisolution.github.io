@@ -1,0 +1,14 @@
+export { Hero } from "./Hero";
+export { TechMarquee } from "./TechMarquee";
+export { Services } from "./Services";
+export { About } from "./About";
+export { Industries } from "./Industries";
+export { CTABanner } from "./CTABanner";
+export { Stats } from "./Stats";
+export { Work } from "./Work";
+export { Process } from "./Process";
+export { WhyUs } from "./WhyUs";
+export { Testimonials } from "./Testimonials";
+export { Pricing } from "./Pricing";
+export { FAQ } from "./FAQ";
+export { Contact } from "./Contact";
